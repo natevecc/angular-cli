@@ -29,6 +29,7 @@ The generated project has dependencies that require **Node 4 or greater**.
 * [Generating a Route](#generating-a-route)
 * [Creating a Build](#creating-a-build)
 * [Environments](#environments)
+* [Bundling](#bundling)
 * [Running Unit Tests](#running-unit-tests)
 * [Running End-to-End Tests](#running-end-to-end-tests)
 * [Deploying the App via GitHub Pages](#deploying-the-app-via-github-pages)
@@ -140,6 +141,11 @@ You can also add your own env files other than `dev` and `prod` by creating a
 `src/client/app/environment.{NAME}.ts` and use them by using the `--env=NAME` 
 flag on the build/serve commands. 
 
+### Bundling
+
+Builds created with the `-prod` flag via `ng build -prod` or `ng serve -prod` bundle
+all dependencies into a single file, and make use of tree-shaking techniques.
+
 ### Running unit tests
 
 ```bash
@@ -206,7 +212,7 @@ You can modify the these scripts in `package.json` to run whatever tool you pref
 
 ### Support for offline applications
 
-The index.html file includes a commented-out code snippet for installing the angular2-service-worker. This support is experimental, please see the angular/mobile-toolkit project for documentation on how to make use of this functionality.
+The index.html file includes a commented-out code snippet for installing the angular2-service-worker. This support is experimental, please see the angular/mobile-toolkit project and https://mobile.angular.io/ for documentation on how to make use of this functionality.
 
 ### Commands autocompletion
 
